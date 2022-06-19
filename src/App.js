@@ -6,13 +6,18 @@ import Documents from './pages/Documents'
 import Fotogalery from './pages/Fotogalery'
 import Home from './pages/Home'
 import History from './pages/History'
+import Admin from './pages/Admin'
 import NoPage from './pages/NoPage'
+import ManageAnnouncements from "./pages/ManageAnnouncements";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/admin" element={<Admin />}>
+          <Route path="manage-announcements" element={<ManageAnnouncements />} />
+        </Route>
+        <Route exact path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="history" element={<History />} />
           <Route path="documents" element={<Documents />} />

@@ -1,10 +1,9 @@
-import { Link, Outlet } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
     return (
-    <>
-    <nav>
-        <ul>
+    <nav >
+        <ul className='flex flex-row items-center justify-center bg-slate-200 gap-[10px]'>
             <li>
                 <Link to='/'>Home</Link>
             </li>
@@ -25,9 +24,6 @@ function Navbar() {
             </li>
         </ul>    
     </nav>
-
-    <Outlet />
-    </>
     )    
 }
 

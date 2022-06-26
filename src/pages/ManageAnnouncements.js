@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useFormik } from 'formik'
 import axios from 'axios'
+import Announcement from '../components/Announcement'
 
 const ManageAnnouncements = () => {
     const [announcements, setAnnouncements] = useState([])
@@ -29,26 +30,7 @@ const ManageAnnouncements = () => {
         <div className='grid grid-cols-2 gap-3'>
             <div className='flex flex-col gap-3'>
                 {announcements.map((announcement, index) => 
-                    (
-                        <div key={index} className='flex flex-row bg-amber-300 rounded-xl p-2 gap-2'>
-                            <div className='flex flex-col gap-2'>
-                                <button 
-                                    className='admin-button bg-blue-500 border-blue-500 hover:border-blue-800'
-                                >
-                                    Upravit
-                                </button>
-                                <button 
-                                    className='admin-button bg-red-500 border-red-500 hover:border-red-800'
-                                >
-                                    Smazat
-                                </button>
-                            </div>
-                            <div>
-                                <div>{announcement.title}</div>
-                                <div>{announcement.content}</div>
-                            </div>
-                        </div>
-                    )
+                    <Announcement key={index} {...announcement} />
                 )}
             </div>
             <div>

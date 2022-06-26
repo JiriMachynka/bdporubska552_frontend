@@ -11,6 +11,12 @@ const ManageAnnouncements = () => {
             .then((res) => setAnnouncements(res.data))
     }, [])
 
+    const editAnnouncement = (title, content) => {
+        console.clear()
+        console.log(`Title: ${title}`)
+        console.log(`Content: ${content}`)
+    }
+
     const formik = useFormik({
         initialValues: {
             title: "",
@@ -30,7 +36,7 @@ const ManageAnnouncements = () => {
         <div className='grid grid-cols-2 gap-3'>
             <div className='flex flex-col gap-3'>
                 {announcements.map((announcement, index) => 
-                    <Announcement key={index} {...announcement} />
+                    <Announcement key={index} {...announcement} editAnnouncement={editAnnouncement} />
                 )}
             </div>
             <div>

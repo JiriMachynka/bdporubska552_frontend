@@ -9,7 +9,7 @@ const Admin = () => {
             <li className="admin-navbar-item"><Link to="/admin/manage-announcements">Správa oznámení</Link></li>
           </ul>
         </div>
-        <div className="">
+        <div className="w-full">
           <Outlet />
         </div>
     </div>

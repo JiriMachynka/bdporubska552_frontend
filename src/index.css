@@ -16,4 +16,8 @@
     .label {
         @apply font-bold text-3xl;
     }
+
+    .admin-button {
+        @apply rounded-xl bg-white w-[100px] py-1 font-bold border-[3px] whitespace-nowrap;
+    }
 }

@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useFormik } from 'formik'
 import axios from 'axios'
 
 const ManageAnnouncements = () => {
+    const [announcements, setAnnouncements] = useState([])
+
+    useEffect(() => {
+        axios.get('http://localhost:3001/api/announcement')
+            .then((res) => setAnnouncements(res.data))
+    }, [])
 
     const formik = useFormik({
         initialValues: {
@@ -20,37 +26,63 @@ const ManageAnnouncements = () => {
     })
 
     return (
-        <div>
-            <form className='flex flex-col w-[700px] gap-2 mx-auto' onSubmit={formik.handleSubmit}>
-                <label className='label' htmlFor='title'>Title</label>
-                <input
-                    id="title"
-                    name="title"
-                    type="text"
-                    className='input-container'
-                    onChange={formik.handleChange}
-                    value={formik.values.title}
-                />
-                <label className='label' htmlFor='content'>Content</label>
-                <textarea
-                    id="content"
-                    name="content"
-                    className='input-container'
-                    rows={20}
-                    cols={20}
-                    onChange={formik.handleChange}
-                    value={formik.values.content}
-                >
-                {formik.values.content}
-                </textarea>
-                <button 
-                    type="submit" 
-                    className='border-[3px] border-green-300 bg-green-300 rounded-lg font-bold h-[50px] text-2xl
-                            hover:border-black'
-                >
-                    Odeslat
-                </button>
-            </form>
+        <div className='grid grid-cols-2 gap-3'>
+            <div className='flex flex-col gap-3'>
+                {announcements.map((announcement, index) => 
+                    (
+                        <div key={index} className='flex flex-row bg-amber-300 rounded-xl p-2 gap-2'>
+                            <div className='flex flex-col gap-2'>
+                                <button 
+                                    className='admin-button bg-blue-500 border-blue-500 hover:border-blue-800'
+                                >
+                                    Upravit
+                                </button>
+                                <button 
+                                    className='admin-button bg-red-500 border-red-500 hover:border-red-800'
+                                >
+                                    Smazat
+                                </button>
+                            </div>
+                            <div>
+                                <div>{announcement.title}</div>
+                                <div>{announcement.content}</div>
+                            </div>
+                        </div>
+                    )
+                )}
+            </div>
+            <div>
+                <form className='flex flex-col gap-2 mx-auto' onSubmit={formik.handleSubmit}>
+                    <label className='label' htmlFor='title'>Title</label>
+                    <input
+                        id="title"
+                        name="title"
+                        type="text"
+                        className='input-container'
+                        onChange={formik.handleChange}
+                        value={formik.values.title}
+                    />
+                    <label className='label' htmlFor='content'>Content</label>
+                    <textarea
+                        id="content"
+                        name="content"
+                        className='input-container'
+                        rows={20}
+                        cols={20}
+                        onChange={formik.handleChange}
+                        value={formik.values.content}
+                    >
+                    {formik.values.content}
+                    </textarea>
+                    <button 
+                        type="submit" 
+                        className='border-[3px] border-green-300 bg-green-300 rounded-lg font-bold h-[50px] text-2xl
+                                hover:border-black'
+                    >
+                        Odeslat
+                    </button>
+                </form>
+            </div>
         </div>
     )
 }

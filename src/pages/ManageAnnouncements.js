@@ -61,6 +61,7 @@ const ManageAnnouncements = () => {
                         {...announcement} 
                     />
                 )}
+                <Tags />
             </div>
             <div>
                 <form className='flex flex-col gap-2 mx-auto' onSubmit={formik.handleSubmit}>
@@ -94,7 +95,6 @@ const ManageAnnouncements = () => {
                     </button>
                 </form>
             </div>
-            {/* <Tags /> */}
         </div>
     )
 }

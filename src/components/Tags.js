@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import CloseIcon from '@mui/icons-material/Close';
 import { useFormik } from 'formik'
 import axios from 'axios'
 
@@ -62,9 +63,8 @@ const Tags = () => {
                     <div 
                         key={index}
                         className="bg-orange-500 rounded-md px-2 py-1 font-bold"
-                        onClick={() => deleteTag(tag._id)}
                     >
-                        {tag.name}
+                        {tag.name} <CloseIcon className="cursor-pointer" onClick={() => deleteTag(tag._id)} />
                     </div>
                 )
             }

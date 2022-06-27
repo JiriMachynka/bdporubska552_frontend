@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useFormik } from 'formik'
 import axios from 'axios'
 import Announcement from '../components/Announcement'
+import Tags from '../components/Tags'
 
 const ManageAnnouncements = () => {
     const [announcements, setAnnouncements] = useState([])
@@ -50,7 +51,7 @@ const ManageAnnouncements = () => {
     })
 
     return (
-        <div className='grid grid-cols-2 gap-3'>
+        <div className='grid grid-cols-2 gap-3 mt-2'>
             <div className='flex flex-col gap-3'>
                 {announcements.map((announcement, index) => 
                     <Announcement 
@@ -93,6 +94,7 @@ const ManageAnnouncements = () => {
                     </button>
                 </form>
             </div>
+            {/* <Tags /> */}
         </div>
     )
 }

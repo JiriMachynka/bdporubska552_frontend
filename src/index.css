@@ -4,8 +4,8 @@
 
 @layer components {
     .admin-navbar-item {
-        @apply bg-blue-200 h-[50px] border-black flex items-center justify-center
-                hover:bg-blue-500;
+        @apply border-4 border-blue-800 flex items-center justify-center mx-2 my-2 rounded-xl font-bold whitespace-nowrap px-3 py-2
+                hover:border-black;
     }
 
     .input-container {

@@ -3,10 +3,10 @@ import { Link, Outlet } from 'react-router-dom'
 
 const Admin = () => {
   return (
-    <div className="flex flex-row px-3 py-2 gap-[15px]">
+    <div className="flex flex-row gap-[15px]">
         <div>
-          <ul className="flex flex-col w-[150px]">
-            <li className="admin-navbar-item"><Link to="/admin/manage-announcements">Správa oznámení</Link></li>
+          <ul className="flex flex-col w-fit h-[800px] bg-blue-500 rounded-br-xl">
+            <li><Link className="admin-navbar-item" to="/admin/manage-announcements">Správa oznámení</Link></li>
           </ul>
         </div>
         <div className="w-full">

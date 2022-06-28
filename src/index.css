@@ -16,4 +16,15 @@
     .label {
         @apply font-bold text-3xl;
     }
+
+    .btn {
+        @apply font-bold text-white py-5 px-3;
+    }
+
+    .btn-sand {
+        @apply bg-sand-navbar hover:bg-sand-body;
+    }
+
+
+    
 }

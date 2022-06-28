@@ -5,7 +5,7 @@ import Footer from "./components/Footer"
 
 function Layout() {
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto bg-sand-body">
             <Header />
             <Main />
             <Footer />

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { useFormik } from 'formik'
 import axios from 'axios'
 import Announcement from '../components/Announcement'
-import Tags from '../components/Tags'
 
 const ManageAnnouncements = () => {
     const [announcements, setAnnouncements] = useState([])
@@ -61,7 +60,6 @@ const ManageAnnouncements = () => {
                         {...announcement} 
                     />
                 )}
-                <Tags />
             </div>
             <div>
                 <form className='flex flex-col gap-2 mx-auto' onSubmit={formik.handleSubmit}>

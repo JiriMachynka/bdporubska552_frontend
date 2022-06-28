@@ -9,7 +9,8 @@ import Home from './pages/Home'
 import History from './pages/History'
 import Admin from './pages/Admin'
 import NoPage from './pages/NoPage'
-import ManageAnnouncements from "./pages/ManageAnnouncements";
+import ManageAnnouncements from "./pages/ManageAnnouncements"
+import ManageImages from "./pages/ManageImages"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/admin" element={<Admin />}>
           <Route path="manage-announcements" element={<ManageAnnouncements />} />
+          <Route path="manage-images" element={<ManageImages />} />
         </Route>
         <Route exact path="/" element={<Layout />}>
           <Route index element={<Home />} />

@@ -18,13 +18,16 @@
     }
 
     .btn {
-        @apply font-bold text-white py-5 px-3;
+        @apply h-[40px] px-2 text-center rounded bg-sand-navbar
+        hover:bg-amber-700 hover:text-slate-300;
     }
 
-    .btn-sand {
-        @apply bg-sand-navbar hover:bg-sand-body;
+    .nav-item {
+        @apply h-[40px] px-2 text-center pt-2; 
     }
 
-
+    .nav-item:hover {
+        @apply rounded bg-amber-700 text-slate-300;
+    }
     
 }

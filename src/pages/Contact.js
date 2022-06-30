@@ -33,7 +33,7 @@ function Contact() {
                 </tr>
             </table>
 
-            <button className='btn btn-sand mt-10 font-bold'>Napište nám</button>
+            <button className='btn'>Napište nám</button>
             
 
         </address>

@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 
 function Header(){
     return (
-        <header className="flex  flex-row h-auto">
+        <header className="flex  md:flex-row sm:flex-col h-auto">
             <img className="w-auto" src={logo} alt="Logo bytového družstva" />
             <div className='w-full relative'>
                 <h1 className="text-center text-4xl font-bold pt-[40px] ">Bytové družstvo Porubská 552</h1>

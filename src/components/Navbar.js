@@ -10,9 +10,11 @@ function Navbar() {
             </li>
             <li className='nav-item'>
                 <Link to='/about'>O nás</Link>
-            </li>
-            <li className='nav-item'>
-                <Link to='/history'>Historie</Link>
+                <ul>
+                    <li><Link to={'about/sprava'}>Správa domu</Link></li>
+                    <li><Link to={'about/predstavenstvo'}>Představenstvo</Link></li>
+                    <li className='nav-item'><Link to='about/history'>Historie</Link></li>
+                </ul>
             </li>
             <li className='nav-item'>
                 <Link to='/documents'>Dokumenty</Link>

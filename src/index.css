@@ -23,11 +23,36 @@
     }
 
     .nav-item {
-        @apply h-[40px] px-2 text-center pt-2; 
+        @apply h-[40px] px-2 text-center pt-2 hidden md:block; 
+    }
+
+    .nav-item:first-child {
+        @apply ml-3 mr-auto md:mr-0 block;
+    }
+
+    @media (min-width: 768px) {
+        .hamburger-menu {
+            display: none !important;
+        }
     }
 
     .nav-item:hover {
         @apply rounded bg-amber-700 text-slate-300;
     }
     
+    .nav-item-dropped {
+        @apply block md:hidden;
+    }
+
+    .dropdown {
+        @apply bg-sand-navbar flex flex-col;
+    }
+
+    .nav-item-dropped {
+        @apply ml-4 mb-2;
+    }
+
+    .main-navbar {
+        transition: height 1s;
+    }
 }

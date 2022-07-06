@@ -51,8 +51,4 @@
     .nav-item-dropped {
         @apply ml-4 mb-2;
     }
-
-    .main-navbar {
-        transition: height 1s;
-    }
 }

@@ -9,26 +9,19 @@ function Navbar() {
     return (
     <nav className='main-navbar h-full mt-auto w-full bg-sand-navbar md:h-11'>
         <ul className='flex flex-row h-full items-center justify-center md:gap-[15px]'>
+            <li className='nav-item'><Link to='/'>Domů</Link></li>
             <li className='nav-item'>
-                <Link to='/'>Domů</Link>
+                O nás
+                <ul>
+                    <li><Link to={'/onas'}>O nás</Link></li>
+                    <li><Link to={'/sprava'}>Správa domu</Link></li>
+                    <li><Link to={'/predstavenstvo'}>Představenstvo</Link></li>
+                </ul>
             </li>
-            <li className='nav-item'>
-                <Link to='/about'>O nás</Link>
-                {/* <ul>
-                    <li><Link to={'about/sprava'}>Správa domu</Link></li>
-                    <li><Link to={'about/predstavenstvo'}>Představenstvo</Link></li>
-                    <li className='nav-item'><Link to='about/history'>Historie</Link></li>
-                </ul> */}
-            </li>
-            <li className='nav-item'>
-                <Link to='/documents'>Dokumenty</Link>
-            </li>
-            <li className='nav-item'>
-                <Link to='/fotogalery'>Fotogalerie</Link>
-            </li>
-            <li className='nav-item'>
-                <Link to='/contact'>Kontakt</Link>
-            </li>
+            <li className='nav-item'><Link to='/documenty'>Dokumenty</Link></li>
+            <li className='nav-item'><Link to='/formulare'>Formuláře</Link></li>
+            <li className='nav-item'><Link to='/fotogalerie'>Fotogalerie</Link></li>
+            <li className='nav-item'><Link to='/kontakt'>Kontakt</Link></li>
             <div onClick={() => setOpened(prev => !prev)}>
                 {opened ?
                     <CloseIcon className='hamburger-menu' style={{

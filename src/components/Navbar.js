@@ -1,19 +1,37 @@
 import React, { useState } from 'react'
+import { Disclosure } from '@headlessui/react'
 import { Link } from 'react-router-dom'
-import MenuIcon from '@mui/icons-material/Menu'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
+//import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
 
 function Navbar() {
     const [opened, setOpened] = useState(false)
 
     return (
-    <nav className='main-navbar h-full mt-auto w-full bg-sand-navbar md:h-11'>
-        <ul className='flex flex-row h-full items-center justify-center md:gap-[15px]'>
-            <li className='nav-item'><Link to='/'>Domů</Link></li>
-            <li className='nav-item'>
+    <Disclosure as='nav' className='bg-sand-navbar'>
+        {({open}) => (
+        <>
+            <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
+                <div className='relative flex items-center justify-between h-16'>
+                    <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                        {/* Mobile menu button*/}
+                        <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                            <span className="sr-only">Open main menu</span>
+                            {open ? (
+                            <XIcon className="block h-6 w-6" aria-hidden="true" />
+                            ) : (
+                            <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                            )}
+                        </Disclosure.Button>
+                    </div>
+        
+        <ul className=''>
+            <li className=''><Link to='/'>Domů</Link></li>
+            <li className=''>
                 O nás
                 <ul>
-                    <li><Link to={'/onas'}>O nás</Link></li>
+                    <li><Link to={'/historie'}>Historie</Link></li>
                     <li><Link to={'/sprava'}>Správa domu</Link></li>
                     <li><Link to={'/predstavenstvo'}>Představenstvo</Link></li>
                 </ul>
@@ -48,18 +66,25 @@ function Navbar() {
                             <li className='nav-item'><Link to='about/history'>Historie</Link></li>
                         </ul> */}
                     </li>
-                    <li className='nav-item-dropped'>
+                    <li className=''>
                         <Link to='/documents'>Dokumenty</Link>
                     </li>
-                    <li className='nav-item-dropped'>
+                    <li className=''>
                         <Link to='/fotogalery'>Fotogalerie</Link>
                     </li>
-                    <li className='nav-item-dropped'>
+                    <li className=''>
                         <Link to='/contact'>Kontakt</Link>
                     </li>
                 </ul>
             }
-    </nav>
+                </div>
+            </div>
+            <Disclosure.Panel>
+
+            </Disclosure.Panel>
+            </>    
+        )}
+    </Disclosure>
     )    
 }
 

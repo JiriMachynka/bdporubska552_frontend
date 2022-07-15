@@ -1,6 +1,6 @@
 import React from 'react'
 
-function About() {
+function History() {
     return(
     <>
     <h2 className="text-2xl font-bold">Historie</h2>
@@ -40,4 +40,4 @@ function About() {
     )
 }
 
-export default About
+export default History

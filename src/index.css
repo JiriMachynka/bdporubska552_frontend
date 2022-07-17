@@ -22,12 +22,16 @@
         hover:bg-amber-700 hover:text-slate-300;
     }
 
-    .nav-item {
-        @apply h-[40px] px-2 text-center pt-2 hidden md:block; 
+    .nav-link {
+        @apply px-3 py-2 rounded-md text-sm font-medium; 
     }
 
-    .nav-item:first-child {
-        @apply ml-3 mr-auto md:mr-0 block;
+    .nav-link .active {
+        @apply bg-gray-900 text-white;
+    }
+
+    .nav-link:hover {
+        @apply bg-gray-700 text-white
     }
 
     @media (min-width: 768px) {

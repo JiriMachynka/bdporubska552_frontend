@@ -1,41 +1,84 @@
 import React, { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Link } from 'react-router-dom'
-import { ChevronDownIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { ChevronDownIcon, ChevronUpIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import logo from '../images/logo-bd552.png'
 
 function Navbar() {
     return (
     <Disclosure as='nav' className='bg-sand-navbar'>
-        {({open}) => (
-        <>
-            <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
-                <div className='relative flex items-center justify-between h-16'>
-                    <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                        {/* Mobile menu button*/}
-                        <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                            <span className="sr-only">Open main menu</span>
-                            {open ? (
-                            <XIcon className="block h-6 w-6" aria-hidden="true" />
-                            ) : (
-                            <MenuIcon className="block h-6 w-6" aria-hidden="true" />
-                            )}
-                        </Disclosure.Button>
+    {({open}) => (
+    <>
+        <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
+            <div className='flex items-center justify-between h-16'>
+                <div className="flex items-center">
+                    <div className='flex-shrink-0'>
+                        <img 
+                            className='h-8 w-auto' 
+                            src={logo}
+                            alt="bd 522"
+                        />
+                    </div>        
+                    <div className='hidden md:block'>
+                        <div className='ml-10 flex items-baseline space-x-4 text-lg'>
+                            {/*Hlavní menu - velké monitory*/}
+                            <Link to='/' className='nav-link'>Domů</Link>
+
+                            {/* Dropdown menu 'O nás' */}
+                            <Menu>
+                            {({open}) => (
+                            <>
+                                <Menu.Button className='nav-link flex items-center'>
+                                    <span className='pr-2'>O nás</span>
+                                    {open ? 
+                                        <ChevronDownIcon className='h-5 w-5' />
+                                        :
+                                        <ChevronUpIcon className='h-5 w-5' />    
+                                    }
+                                </Menu.Button>
+                            
+                                <Transition
+                                    
+                                >
+                                    <Menu.Items>
+                                        <Menu.Item>
+
+                                        </Menu.Item>
+                                    </Menu.Items>
+                                </Transition>
+                                </>
+                            )}    
+                            </Menu>
+
+                            <Link to='/documenty' className='nav-link'>Dokumenty</Link>
+                            <Link to='/formulare' className='nav-link'>Formuláře</Link>
+                            <Link to='/fotogalerie' className='nav-link'>Fotogalerie</Link>
+                            <Link to='/kontakt' className='nav-link'>Kontakt</Link>
+                        </div>
                     </div>
-                    <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
-                        <div className='flex-shrink-0 flex items-center'>
-                           <img className='block lg:hidden h-8 w-auto' 
-                            src={logo}
-                            alt="bd porubska 522"
-                           />
-                           <img className='hidden lg:block h-8 w-auto' 
-                            src={logo}
-                            alt="bd 552"
-                           />
-                        </div> 
+                </div>
+                
+                <div>
+                        {/* Tady by mohlo být tlačítko pro vstup do administrace - ???? */}
+                </div>
+
+                <div>
+                    {/* Menu pro mobilní telefony*/}
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
+                         
                         <div className='hidden sm:block sm:ml-6'>
                             <div className='flex space-x-4'>
-                                <Link to='/' className='nav-link'>Domů</Link>
+                                
                                 {/*Dropdown menu*/}
                                 <Menu as='div' className='relative inline-block text-left'>
                                     <Menu.Button className='nav-link inline-flex'>
@@ -67,24 +110,22 @@ function Navbar() {
                                         </Menu.Items>
                                     </Transition>
                                 </Menu>
-                                <Link to='/documenty' className='nav-link'>Dokumenty</Link>
-                                <Link to='/formulare' className='nav-link'>Formuláře</Link>
-                                <Link to='/fotogalerie' className='nav-link'>Fotogalerie</Link>
-                                <Link to='/kontakt' className='nav-link'>Kontakt</Link>
+                                
                             </div>
                        </div>
-                    </div>
-                                
-
-
-
                 </div>
-            </div>
-            <Disclosure.Panel>
+                
+                <div>
 
-            </Disclosure.Panel>
-            </>    
-        )}
+                </div>                
+
+            </div>
+        </div>
+        <Disclosure.Panel>
+
+        </Disclosure.Panel>
+    </>    
+    )}
     </Disclosure>
     )    
 }

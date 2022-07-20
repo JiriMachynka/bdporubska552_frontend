@@ -66,13 +66,13 @@ function Navbar() {
                         {/* Tady by mohlo být tlačítko pro vstup do administrace - ???? */}
                 </div>
 
-                <div className='-mr-2 flex md:hidden'>
+                <div className='mr-4 flex md:hidden'>
                    {/* Menu pro mobilní telefony*/}
                   <Disclosure.Button>
                     {open ? (
-                        <XIcon className='h-5 w-5' />
+                        <XIcon className='h-8 w-8' />
                     ):(
-                        <MenuIcon className='h-5 w-5' />
+                        <MenuIcon className='h-8 w-8' />
                     )}
                   </Disclosure.Button> 
                 </div>
@@ -80,8 +80,14 @@ function Navbar() {
             </div>
         </div>
         
-        <Disclosure.Panel className='md:hidden h-7 bg-slate-500'>
-            <div></div>
+        <Disclosure.Panel className='md:hidden '>
+            <div className='flex flex-col text-xl text-center'>
+                <Link to='/' className='hover:bg-sand-font hover:text-white'>Domů</Link>
+                <Link to='/documenty' className='hover:bg-sand-font hover:text-white'>Dokumenty</Link>
+                <Link to='/formulare' className='hover:bg-sand-font hover:text-white'>Formuláře</Link>
+                <Link to='/fotogalerie' className='hover:bg-sand-font hover:text-white'>Fotogalerie</Link>
+                <Link to='/kontakt' className='hover:bg-sand-font hover:text-white'>Kontakt</Link>
+            </div>
             <div></div>
         </Disclosure.Panel>
     </>    

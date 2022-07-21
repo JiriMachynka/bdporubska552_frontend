@@ -37,7 +37,7 @@ function Contact(props) {
             </address>
             <p className='mt-8'>Můžete nás kontaktovat pomocí <button className='font-bold'>formuláře.</button></p>
         </div>
-        <iframe  className="" title="mapy"  src="https://frame.mapy.cz/s/lorupedapa" width="480" height="280" frameborder="0"></iframe>
+        <iframe  className="" title="mapy"  src="https://frame.mapy.cz/s/lorupedapa" width="480" height="310" frameborder="0"></iframe>
     </div>    
        
     </>

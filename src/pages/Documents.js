@@ -1,9 +1,11 @@
 import React from 'react'
+import Nadpis from '../components/Nadpis'
 
-function Documents() {
+function Documents(props) {
     return(
     <>
-    <h2 className="text-2xl font-bold">Dokumenty</h2>
+    <Nadpis name={props.page} />
+    
     <p>Důležité dokumenty ve formátu pdf.</p>
 
     <ul>

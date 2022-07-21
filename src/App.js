@@ -20,14 +20,14 @@ function App() {
           <Route path="manage-announcements" element={<ManageAnnouncements />} />
         </Route>
         <Route exact path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="documenty" element={<Documents />} />
-          <Route path="fotogalerie" element={<Fotogalery />} />
-          <Route path="kontakt" element={<Contact />} />
-          <Route path="historie" element={<History />} />
-          <Route path='predstavenstvo' element={<Predstavenstvo />} />
-          <Route path='sprava' element={<Sprava />} />
-          <Route path='formulare' element={<Forms />} />
+          <Route index element={<Home page='Domů'/>} />
+          <Route path="documenty" element={<Documents page='Dokumenty'/>} />
+          <Route path="fotogalerie" element={<Fotogalery page='Fotogalerie'/>} />
+          <Route path="kontakt" element={<Contact page='Kontakt'/>} />
+          <Route path="historie" element={<History page='Historie'/>} />
+          <Route path='predstavenstvo' element={<Predstavenstvo page='Představenstvo'/>} />
+          <Route path='sprava' element={<Sprava page='Správa'/>} />
+          <Route path='formulare' element={<Forms page='Formuláře'/>} />
         </Route> 
           <Route path="*" element={<NoPage />} />
       </Routes>

@@ -9,7 +9,7 @@ function Navbar() {
     <Disclosure as='nav' className='bg-sand-navbar'>
     {({open}) => (
     <>
-        <div className='max-w-7xl mx-auto px-2 sm:px-6 md:px-8'>
+        <div className='max-w-5xl mx-auto px-2 sm:px-6 md:px-8'>
             <div className='flex items-center justify-between h-16'>
                 <div className="flex items-center">
                     <div className='flex-shrink-0'>
@@ -20,7 +20,7 @@ function Navbar() {
                         />
                     </div>        
                     <div className='hidden md:block'>
-                        <div className='ml-10 flex items-baseline space-x-4 text-lg'>
+                        <div className='ml-10 flex items-baseline space-x-4 text-lg '>
                             {/*Hlavní menu - velké monitory*/}
                             <Link to='/' className='nav-link'>Domů</Link>
 

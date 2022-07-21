@@ -1,9 +1,10 @@
 import React from 'react'
+import Nadpis from '../components/Nadpis'
 
-function History() {
+function History(props) {
     return(
     <>
-    <h2 className="text-2xl font-bold">Historie</h2>
+    <Nadpis name={props.page} />
     
     <ol className='flex flex-wrap p-0 mb-4 list-none '>
         <li className='pr-2'><a href="/">Home</a></li>

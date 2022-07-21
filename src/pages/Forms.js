@@ -1,9 +1,10 @@
 import React from 'react'
+import Nadpis from '../components/Nadpis'
 
-function Forms() {
+function Forms(props) {
     return(
     <>
-    <h2 className="text-2xl font-bold">Formuláře</h2>
+    <Nadpis name={props.page} />
     <p>Zde naleznete formuláře ke stažení.</p>
     <br />
     <p>???? on-line vyplnění, tisk vyplněného nebo i odeslání ????</p>

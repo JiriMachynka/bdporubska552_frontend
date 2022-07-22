@@ -7,13 +7,13 @@ function Predstavenstvo(props) {
     <Nadpis name={props.page} />
     
     <h3 className='text-center text-2xl py-8'>Členové představenstva a kontrolní komise</h3>
-    <div className='grid grid-cols-2 pt-2 pb-4'>
+    <div className='grid md:grid-cols-2 grid-cols-1 pt-2 pb-4'>
         
         <div className='border-l-4'>
             <table>
                 <thead>
                     <tr>
-                        <th className='text-left'>Představenstvo</th>
+                        <th>Představenstvo</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,7 +34,7 @@ function Predstavenstvo(props) {
             <table>
                <thead>
                     <tr>
-                        <th className='text-left'>Kontrolní komise</th>
+                        <th>Kontrolní komise</th>
                     </tr>
                 </thead>
                 <tbody>

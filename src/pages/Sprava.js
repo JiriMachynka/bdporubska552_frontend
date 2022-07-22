@@ -6,11 +6,85 @@ function Sprava(props) {
     <>
     <Nadpis name={props.page} />
     
-    <ol className='flex flex-wrap p-0 mb-4 list-none '>
-        <li className='pr-2'><a href="/">Home</a></li>
-        <li className='pr-2'> | </li>
-        <li>Správa domu</li>
-    </ol>
+    <div className='grid grid-cols-1 pt-2 pb-4'>
+        <div className=' grid md:grid-rows border-b-4'>
+            <table>
+                <thead>
+                    <tr><th colSpan='4'><span>OWLET REALITY s.r.o</span><span> , Spojů 835/2A, Ostrava – Poruba, 708 00</span></th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowSpan='2' className='text-start'>Úřední hodiny:</td>
+                        <td>Pondělí</td>
+                        <td>8 – 12 hod.</td>
+                        <td>13 – 17 hod.</td>
+                    </tr>
+                    <tr>
+                        <td>Středa</td>
+                        <td>8 – 12 hod.</td>
+                        <td>13 – 14 hod.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div className='grid md:grid-cols-2 pt-8'>
+            <div className='md:border-l-4 md:border-r-2'>
+                <table>
+                    <thead>
+                        <tr><th>Kontakty</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rychlý kontakt</td>
+                            <td>592 750 017</td>
+                        </tr>
+                        <tr>
+                            <td>E-mail</td>
+                            <td>owletreality@owletreality.cz</td>
+                        </tr>
+                        <tr>
+                            <td>Účetní oddělení:</td>
+                            <td>724 036 434</td>
+                        </tr>
+                        <tr>
+                            <td>Technické oddělení</td>
+                            <td>728 933 060</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div className='md:border-l-2 md:border-r-4'>
+                <table>
+                    <thead>
+                        <tr><th colSpan='2'>Havarijní a poruchová služba</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>HAVARIJNÍ SLUŽBA</p>
+                                <p>(voda, topení, plyn)</p>
+                                <p>Nepřetržitě</p>
+                                <p>Šimek gass s.r.o.</p>
+                                <p>tel: 602 718 503</p>
+                                <p>e-mail: simek@gass.cz</p>
+                            </td>
+                            <td>
+                                <p>EV-servis s. r. o.</p>
+                                <p>Středisko výtahy</p>
+                                <p>tel.: 596 919 554</p>
+                                <br />
+                                <p>NONSTOP SERVIS</p>
+                                 <p>602 744 427</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>    
+        </div>
+    </div>
+
+
+    
     
     
 </>

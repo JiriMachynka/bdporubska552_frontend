@@ -63,4 +63,8 @@
     td, th {
         @apply py-2 px-3;
     }
+
+    th {
+        @apply text-left;
+    }
 }

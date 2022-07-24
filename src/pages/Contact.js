@@ -1,5 +1,7 @@
 import React from 'react'
 import Nadpis from '../components/Nadpis'
+import { Disclosure} from '@headlessui/react'
+import ContactForm from '../components/ContactForm'                      
 
 function Contact(props) {
     return(
@@ -35,9 +37,18 @@ function Contact(props) {
                     </tr>
                 </table>
             </address>
-            <p className='mt-8'>Můžete nás kontaktovat pomocí <button className='font-bold'>formuláře.</button></p>
+            
+            {/*Kontaktní formulář*/}
+            <Disclosure>
+                <Disclosure.Button className="h-8 w-auto px-2 rounded-md bg-sand-navbar hover:bg-sand-font hover:text-white">
+                    Kontaktní formulář
+                </Disclosure.Button>
+                <Disclosure.Panel className="mt-5">
+                    <ContactForm />
+                </Disclosure.Panel>
+            </Disclosure>
         </div>
-        <iframe  className="" title="mapy"  src="https://frame.mapy.cz/s/lorupedapa" width="480" height="310" frameborder="0"></iframe>
+        <iframe  className="" title="mapy"  src="https://frame.mapy.cz/s/lorupedapa" width="100%" height="100%" frameborder="0"></iframe>
     </div>    
        
     </>

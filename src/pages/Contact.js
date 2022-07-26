@@ -8,7 +8,7 @@ function Contact(props) {
     <>
     <Nadpis name={props.page} />
     
-    <div className='grid grid-cols-2 mt-5 justify-items-stretch'>
+    <div className='grid md:grid-cols-2 mt-5 gap-2 justify-items-stretch'>
         <div className='pl-5 pt-3'>
             <address >
                 <table>
@@ -43,7 +43,7 @@ function Contact(props) {
                 <Disclosure.Button className="h-8 w-auto px-2 rounded-md bg-sand-navbar hover:bg-sand-font hover:text-white">
                     Kontaktní formulář
                 </Disclosure.Button>
-                <Disclosure.Panel className="mt-5">
+                <Disclosure.Panel>
                     <ContactForm />
                 </Disclosure.Panel>
             </Disclosure>

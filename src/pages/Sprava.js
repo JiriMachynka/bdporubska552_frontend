@@ -28,27 +28,27 @@ function Sprava(props) {
             </table>
         </div>
         <div className='grid md:grid-cols-2 pt-8'>
-            <div className='md:border-l-4 md:border-r-2'>
-                <table>
+            <div className='md:border-l-4 md:border-r-2 px-3'>
+                <table id='contacts'>
                     <thead>
                         <tr><th>Kontakty</th></tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Rychlý kontakt</td>
-                            <td>592 750 017</td>
+                            <td className='border-b-2 border-black'>Rychlý kontakt</td>
+                            <td className='border-b-2 border-black'>592 750 017</td>
                         </tr>
                         <tr>
-                            <td>E-mail</td>
-                            <td>owletreality@owletreality.cz</td>
+                            <td className='border-b-2 border-black'>E-mail</td>
+                            <td className='border-b-2 border-black'>owletreality@owletreality.cz</td>
                         </tr>
                         <tr>
-                            <td>Účetní oddělení:</td>
-                            <td>724 036 434</td>
+                            <td className='border-b-2 border-black'>Účetní oddělení:</td>
+                            <td className='border-b-2 border-black'>724 036 434</td>
                         </tr>
                         <tr>
-                            <td>Technické oddělení</td>
-                            <td>728 933 060</td>
+                            <td className='border-b-2 border-black'>Technické oddělení</td>
+                            <td className='border-b-2 border-black'>728 933 060</td>
                         </tr>
                     </tbody>
                 </table>
@@ -74,7 +74,7 @@ function Sprava(props) {
                                 <p>tel.: 596 919 554</p>
                                 <br />
                                 <p>NONSTOP SERVIS</p>
-                                 <p>602 744 427</p>
+                                <p>602 744 427</p>
                             </td>
                         </tr>
                     </tbody>

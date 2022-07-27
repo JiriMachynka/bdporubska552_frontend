@@ -67,4 +67,8 @@
     th {
         @apply text-left;
     }
+
+    #contacts tbody tr:nth-child(even) {
+        @apply bg-slate-200;
+    }
 }

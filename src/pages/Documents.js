@@ -1,19 +1,33 @@
 import React from 'react'
 import Nadpis from '../components/Nadpis'
+//import * as fsys from 'fs';
+
 
 function Documents(props) {
-    return(
+  /*  
+  const dir = './files';
+  let files; 
+  fsys.readdir(dir, (err, files) => {
+    console.log(files);
+  });
+  */
+  
+  
+  return(
     <>
     <Nadpis name={props.page} />
     
     <p>Důležité dokumenty ve formátu pdf.</p>
 
-    <ul>
-        <li>Stanovy družstva</li>
-        <li>Domovní řád</li>
-        <li>Informace a podmínky k provádění rekonstrukcí v bytech</li>
-        <li>... a další.</li>
-    </ul>
+    <div>
+      <div>
+        <a href='./files/Stanovy-2021.pdf' target='blanc' >Stanovy družstva</a>
+        <button>
+          <a href='./files/stanovy-2021.pdf' download aria-describedby='Stáhnout stanovy'></a>
+          Stáhnout
+        </button>
+        </div>
+    </div>
 
 </>
     )

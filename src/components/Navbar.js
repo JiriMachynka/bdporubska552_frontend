@@ -47,13 +47,13 @@ function Navbar() {
                                 > 
                                     <Menu.Items className='absolute w-auto flex flex-col mt-2 p-3 bg-sand-navbar'>
                                         <Menu.Item >
-                                            <Link className='hover:bg-sand-font hover:text-white' to={'/historie'}>Historie</Link>
+                                            <Link to='/historie' className='hover:bg-sand-font hover:text-white' >Historie</Link>
                                         </Menu.Item>
                                         <Menu.Item>
-                                            <Link className='hover:bg-sand-font hover:text-white' to={'/sprava'}>Správa domu</Link>
+                                            <Link to='/sprava' className='hover:bg-sand-font hover:text-white' >Správa domu</Link>
                                         </Menu.Item>
                                         <Menu.Item>
-                                            <Link className='hover:bg-sand-font hover:text-white' to={'/predstavenstvo'}>Představenstvo</Link>
+                                            <Link to='/predstavenstvo' className='hover:bg-sand-font hover:text-white' >Představenstvo</Link>
                                         </Menu.Item>
                                     </Menu.Items>
                                 </Transition>
@@ -88,12 +88,14 @@ function Navbar() {
         <Disclosure.Panel className='md:hidden '>
             <div className='flex flex-col text-xl text-center'>
                 <Link to='/' className='hover:bg-sand-font hover:text-white'>Domů</Link>
+                <Link to='/historie' className='hover:bg-sand-font hover:text-white' >Historie</Link>
+                <Link to='/sprava' className='hover:bg-sand-font hover:text-white' >Správa domu</Link>
+                <Link to='/predstavenstvo' className='hover:bg-sand-font hover:text-white' >Představenstvo</Link>
                 <Link to='/documenty' className='hover:bg-sand-font hover:text-white'>Dokumenty</Link>
                 <Link to='/formulare' className='hover:bg-sand-font hover:text-white'>Formuláře</Link>
                 <Link to='/fotogalerie' className='hover:bg-sand-font hover:text-white'>Fotogalerie</Link>
                 <Link to='/kontakt' className='hover:bg-sand-font hover:text-white'>Kontakt</Link>
             </div>
-            <div></div>
         </Disclosure.Panel>
     </>    
     )}

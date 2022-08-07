@@ -4,7 +4,7 @@ import Nadpis from '../components/Nadpis'
 
 
 function Documents(props) {
-    
+  /* 
   const dir = './files';
   const files = [
     'Aktuality.pdf',
@@ -12,7 +12,8 @@ function Documents(props) {
     'Hlaseni-zmen.pdf',
     'Stanovy-2021.pdf',
   ];
-   
+  */
+  
   return(
     <>
     <Nadpis name={props.page} />
@@ -21,12 +22,11 @@ function Documents(props) {
 
     <div className=' flex flex-col text-center mt-3 bg-slate-50'>
       
-        for(const file of files){
           <div className='py-2'>
-            <a  href={dir.concat('/', file)} target='blanc' >{file.split('.')}</a>
-            <a className='ml-5' href={dir.concat('/', file)} download aria-describedby='Stáhnout'>Stáhnout</a>
+            <a  href='' >Nazev souboru</a>
+            <a className='ml-5' href='#' download aria-describedby='Stáhnout'>Stáhnout</a>
           </div>
-        }
+
         
     </div>
 

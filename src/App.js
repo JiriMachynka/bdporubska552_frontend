@@ -12,12 +12,14 @@ import NoPage from './pages/NoPage'
 import ManageAnnouncements from "./pages/ManageAnnouncements";
 import Predstavenstvo from './pages/Predstavenstvo';
 import Sprava from './pages/Sprava';
+import FilesManager from './pages/FilesManager';
 
 function App() {
   return (
       <Routes>
         <Route path="/admin" element={<Admin />}>
           <Route path="manage-announcements" element={<ManageAnnouncements />} />
+          <Route path="files-manager" element={<FilesManager />} />
         </Route>
         <Route exact path="/" element={<Layout />}>
           <Route index element={<Home page='Domů'/>} />

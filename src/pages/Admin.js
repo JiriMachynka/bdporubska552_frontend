@@ -7,6 +7,7 @@ const Admin = () => {
         <div>
           <ul className="flex flex-col w-[150px]">
             <li className="admin-navbar-item"><Link to="/admin/manage-announcements">Správa oznámení</Link></li>
+            <li className='admin-navbar-item'><Link to="/admin/files-manager">Správce souborů</Link></li>
           </ul>
         </div>
         <div className="w-full">

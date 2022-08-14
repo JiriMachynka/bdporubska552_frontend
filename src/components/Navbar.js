@@ -22,7 +22,7 @@ function Navbar() {
                         />
                     </div>        
                     <div className='hidden md:block'>
-                        <div className='ml-10 flex items-baseline space-x-4 text-lg '>
+                        <div className='ml-10 flex items-center space-x-4 text-lg '>
                             {/*Hlavní menu - velké monitory*/}
                             <Link to='/' className='nav-link'>Domů</Link>
 

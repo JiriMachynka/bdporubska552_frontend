@@ -12,6 +12,7 @@ function Contact(props) {
         <div className='pl-5 pt-3'>
             <address >
                 <table>
+                    <tbody>
                     <tr className='text-left'>
                         <th>Obchodní název:</th>
                         <td className='px-3'>Bytové družstvo Porubská 552</td>
@@ -35,6 +36,7 @@ function Contact(props) {
                     <tr className='text-left'>
                         <th colSpan={2}></th>
                     </tr>
+                    </tbody>
                 </table>
             </address>
             

@@ -1,6 +1,7 @@
 import React from "react";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import axios from 'axios';
 
 const ContactForm = () => {
 
@@ -12,7 +13,7 @@ const ContactForm = () => {
     },
     validationSchema: Yup.object({
       name: Yup.string()
-        .max(15, 'Jméno musí obsahovat maximálně 15 znaků')
+        .max(25, 'Jméno musí obsahovat maximálně 25 znaků')
         .required('Nutno vyplnit'),
       email: Yup.string()
         .email('Zadejte platnou emailovou adresu')  
@@ -21,7 +22,15 @@ const ContactForm = () => {
         .max(255, 'Zadejte maximálně 255 znaků')
         .required('Nutno vyplnit'), 
     }),
-    onSubmit: values => { console.log(values) }, 
+    onSubmit: values => { 
+      console.log(values);
+      const {name, email, message} = formik.values;
+      axios.post('http://localhost:3001/api/sendmail', {
+        name: name,
+        email: email,
+        message: message,
+      }).then(res => console.log(res));
+    }, 
 
     }
   );

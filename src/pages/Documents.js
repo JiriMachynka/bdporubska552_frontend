@@ -23,8 +23,7 @@ function Documents(props) {
     <div className=' flex flex-col text-center mt-3 bg-slate-50'>
       
           <div className='py-2'>
-            <a  href='' >Nazev souboru</a>
-            <a className='ml-5' href='#' download aria-describedby='Stáhnout'>Stáhnout</a>
+            {/*<a className='ml-5' href='#' download aria-describedby='Stáhnout'>Stáhnout</a>*/}
           </div>
 
         
